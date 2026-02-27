@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-
+//this commit is intentional.
 // ── Protect — must be logged in ─────────────────────────────────
 const protect = async (req, res, next) => {
   try {
