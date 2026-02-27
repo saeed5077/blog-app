@@ -52,6 +52,7 @@ router.post('/login', async (req, res, next) => {
 
     // Must use .select('+password') because we set select:false on schema
     const user = await User.findOne({ email }).select('+password');
+    // console.log(user);
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
