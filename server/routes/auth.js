@@ -43,6 +43,7 @@ router.post('/register', async (req, res, next) => {
 
 // ── POST /api/auth/login ────────────────────────────────────────
 router.post('/login', async (req, res, next) => {
+  console.log('Raw body received:', req.body);
   try {
     const { email, password } = req.body;
 
